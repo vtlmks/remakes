@@ -10,7 +10,7 @@ To build and run the project, you need the following:
 ## Build Instructions
 
 1. Clone this repository and navigate to the root directory.
-2. Run the `./bootstrap.sh` script to prepare the environment and build GLFW as a static library.
+2. Run the `./bootstrap.sh` script to prepare the environment and build GLFW as a static library for both linux and windows.
    ```bash
    ./bootstrap.sh
    ```
@@ -22,8 +22,8 @@ To build and run the project, you need the following:
 
 ## Output
 - After the build completes, the following files will be generated in the same directory:
-  - `remake`
-  - `remake.exe`
+  - `remake` (linux version)
+  - `remake.exe` (windows version)
 
 You can now use the built binaries as needed.
 
