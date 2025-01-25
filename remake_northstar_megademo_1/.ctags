@@ -1,0 +1,6 @@
+--recurse
+--fields=+S
+--exclude=/usr/include/*/
+--include=/usr/include/*.h
+
+

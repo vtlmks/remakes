@@ -1,0 +1,34 @@
+{
+	"C_Cpp.intelliSenseEngine": "Tag Parser",
+    "files.exclude": {
+        "**/.base_linux": true,
+        "**/.base_windows": true
+	},
+	"files.associations": {
+		"fragment_shader.h": "c",
+		"p05_n_s_speedo.h": "c",
+		"p08_n_s_dreamer.h": "c",
+		"chrono": "c",
+		"text_encoding": "c",
+		"typeinfo": "c",
+		"cstring": "c",
+		"algorithm": "c",
+		"ugg.h": "c",
+		"inttypes.h": "c",
+		"render_clip.h": "c",
+		"stdbool.h": "c",
+		"resampler.h": "c",
+		"generic_scroller.h": "c",
+		"base.h": "c",
+		"cstdint": "cpp",
+		"array": "c",
+		"string": "c",
+		"string_view": "c",
+		"span": "c",
+		"compare": "cpp",
+		"hash_map": "c",
+		"format": "c",
+		"blit.h": "c",
+		"variant": "c"
+	}
+}

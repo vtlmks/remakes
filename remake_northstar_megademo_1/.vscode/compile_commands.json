@@ -1,0 +1,62 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-mtune=native",
+      "-O2",
+      "-msse4.1",
+      "-std=gnu11",
+      "-flto",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wall",
+      "-fwrapv",
+      "-ffast-math",
+      "-fno-trapping-math",
+      "-Wno-trigraphs",
+      "-Wno-unused-variable",
+      "-Wno-unused-const-variable",
+      "-Wno-unused-function",
+      "-I../include",
+      "-I../base",
+      "-pthread",
+      "-o",
+      "remake",
+      "remake.c"
+    ],
+    "directory": "/work/remakes/remake_northstar_megademo_1",
+    "file": "/work/remakes/remake_northstar_megademo_1/remake.c",
+    "output": "/work/remakes/remake_northstar_megademo_1/remake"
+  },
+  {
+    "arguments": [
+      "/usr/bin/x86_64-w64-mingw32-gcc",
+      "-c",
+      "-mtune=native",
+      "-O2",
+      "-msse4.1",
+      "-std=gnu11",
+      "-flto",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wall",
+      "-fwrapv",
+      "-ffast-math",
+      "-fno-trapping-math",
+      "-Wno-trigraphs",
+      "-Wno-unused-variable",
+      "-Wno-unused-const-variable",
+      "-Wno-unused-function",
+      "-mwindows",
+      "-I../include",
+      "-I../base",
+      "-o",
+      "remake.exe",
+      "remake.c"
+    ],
+    "directory": "/work/remakes/remake_northstar_megademo_1",
+    "file": "/work/remakes/remake_northstar_megademo_1/remake.c",
+    "output": "/work/remakes/remake_northstar_megademo_1/remake.exe"
+  }
+]
