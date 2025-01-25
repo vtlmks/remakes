@@ -1,0 +1,12 @@
+#!/bin/bash
+
+previous_head="$1"
+new_head="$2"
+
+new_branch=$(git branch --show-current)
+
+if [[ "$new_branch" != "master" && "$previous_head" != "$new_head" ]]; then
+    git merge master --no-ff -m "Automatic merge of master on branch checkout"
+    git push origin "$new_branch" #Push the changes to gitea
+fi
+
