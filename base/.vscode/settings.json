@@ -1,0 +1,21 @@
+{
+    "files.exclude": {
+        "**/.base_linux": true,
+        "**/.base_windows": true
+	},
+	"files.associations": {
+		"fragment_shader.h": "c",
+		"hash_map": "cpp",
+		"format": "cpp",
+		"p05_n_s_speedo.h": "c",
+		"p08_n_s_dreamer.h": "c",
+		"chrono": "c",
+		"text_encoding": "c",
+		"typeinfo": "c",
+		"rand.h": "c",
+		"glfw3.h": "c",
+		"cstdint": "cpp",
+		"incbin.h": "c",
+		"time.h": "c"
+	}
+}
