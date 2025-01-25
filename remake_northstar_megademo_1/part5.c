@@ -303,7 +303,7 @@ static void p5_recalculate_background(uint32_t color) {
 		p5_logo_background_colors[i] = color;
 		color += 0x110000 * direction;
 
-		counter = (counter + direction) & 0xf; // Wrap counter within 0–0xf
+		counter = (counter + direction) & 0xf; // Wrap counter within 0-0xf
 		direction = (counter == 0 || counter == 0xf) ? -direction : direction;
 	}
 }
@@ -554,7 +554,7 @@ static inline void p5_render_image_with_palette(struct ugg *image, uint32_t *pal
 
 static void p5_render_warhammer_40k() {
 	PROFILE_FUNCTION();
-	p5_render_image_with_palette(p5_warhammer_logo_data, p5_warhammer_palette, NULL, buffer, 14);
+	p5_render_image_with_palette(p5_warhammer_logo_data, p5_warhammer_palette, 0, buffer, 14);
 	p5_render_image_with_palette(p5_rogue_40k_logo_data, p5_40k_palette, p5_rogue_palette, buffer, 41);
 	p5_warhammer_index = (p5_warhammer_index == 0) ? 29 : p5_warhammer_index - 1;
 }
