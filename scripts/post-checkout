@@ -5,8 +5,18 @@ new_head="$2"
 
 new_branch=$(git branch --show-current)
 
-if [[ "$new_branch" != "master" && "$previous_head" != "$new_head" ]]; then
-    git merge master --no-ff -m "Automatic merge of master on branch checkout"
-    git push origin "$new_branch" #Push the changes to gitea
+if [[ "$new_branch" == "master" && "$previous_head" != "$new_head" ]]; then # Check if switching TO master
+	previous_branch=$(git name-rev --name-only "$previous_head")
+
+	#Check if the previous branch was a feature branch
+	if [[ "$previous_branch" == feature/* ]]; then
+		git merge -s ours "$previous_branch" # Merge strategy ours
+		git checkout "$previous_branch" base/ #Copy the directory from the other branch
+		git add base/
+		git commit -m "Merged base code changes from $previous_branch"
+	fi
+elif [[ "$new_branch" != "master" && "$previous_head" != "$new_head" ]]; then #Check if switching from master to a feature branch
+	git merge master --no-ff -m "Automatic merge of master on branch checkout"
+	git push origin "$new_branch"
 fi
 
