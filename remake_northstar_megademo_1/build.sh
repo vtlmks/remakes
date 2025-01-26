@@ -4,9 +4,9 @@
 BUILD_TYPE=$1
 
 if [ "$BUILD_TYPE" == "debug" ]; then
-	CFLAGS="-mtune=native -g -O0 -msse4.1 -std=gnu11 -ffunction-sections -fdata-sections -Wall -Wextra -fwrapv -ffast-math -fno-trapping-math -Wno-unused-parameter -Wno-sign-compare -Wno-trigraphs -Wno-unused-variable -Wno-unused-const-variable -Wno-unused-function"
+	CFLAGS="-mtune=native -g -O0 -msse4.1 -std=gnu11 -fwhole-program -ffunction-sections -fdata-sections -Wall -Wextra -fwrapv -ffast-math -fno-trapping-math -Wno-unused-parameter -Wno-sign-compare -Wno-trigraphs -Wno-unused-variable -Wno-unused-const-variable -Wno-unused-function"
 else
-	CFLAGS="-mtune=native -O2 -msse4.1 -std=gnu11 -flto -ffunction-sections -fdata-sections -Wall -Wextra -fwrapv -ffast-math -fno-trapping-math -Wno-unused-parameter -Wno-sign-compare -Wno-trigraphs -Wno-unused-variable -Wno-unused-const-variable -Wno-unused-function"
+	CFLAGS="-mtune=native -O2 -msse4.1 -std=gnu11 -flto -fwhole-program -ffunction-sections -fdata-sections -Wall -Wextra -fwrapv -ffast-math -fno-trapping-math -Wno-unused-parameter -Wno-sign-compare -Wno-trigraphs -Wno-unused-variable -Wno-unused-const-variable -Wno-unused-function"
 fi
 LDFLAGS="-Wl,--gc-sections"
 
